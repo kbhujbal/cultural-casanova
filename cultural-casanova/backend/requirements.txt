@@ -1,0 +1,21 @@
+# LiveKit Agents Framework v1.x
+livekit-agents>=1.0.0
+livekit-plugins-openai>=1.0.0
+livekit-plugins-deepgram>=1.0.0
+livekit-plugins-elevenlabs>=1.0.0
+livekit-plugins-silero>=1.0.0
+
+# RAG with LlamaIndex
+llama-index>=0.11.0
+llama-index-embeddings-openai>=0.2.0
+llama-index-llms-openai>=0.2.0
+
+# PDF Processing
+pypdf>=4.0.0
+
+# OpenAI SDK (for tool calls)
+openai>=1.0.0
+
+# Environment & Utilities
+python-dotenv>=1.0.0
+aiohttp>=3.9.0

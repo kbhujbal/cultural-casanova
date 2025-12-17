@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+/* Custom romantic styling */
+:root {
+  --romance-primary: #e11d48;
+  --romance-secondary: #fbbf24;
+  --romance-dark: #4c0519;
+  --romance-light: #fff1f2;
+}
+
+body {
+  background: linear-gradient(135deg, #4c0519 0%, #881337 50%, #9f1239 100%);
+  min-height: 100vh;
+}
+
+/* Romantic card styling */
+.romantic-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Glowing button effect */
+.glow-button {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+  transition: all 0.3s ease;
+}
+
+.glow-button:hover {
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Pulsing microphone indicator */
+.mic-pulse {
+  animation: micPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes micPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(251, 191, 36, 0);
+  }
+}
+
+/* Transcript styling */
+.transcript-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(251, 191, 36, 0.5) transparent;
+}
+
+.transcript-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transcript-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.transcript-container::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.5);
+  border-radius: 3px;
+}
+
+/* Rose decoration animation */
+.rose-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Message bubbles */
+.message-agent {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #1a1a1a;
+}
+
+.message-user {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: white;
+}
+
+/* Status indicator */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-connected {
+  background-color: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.status-connecting {
+  background-color: #fbbf24;
+  animation: pulse 1s infinite;
+}
+
+.status-disconnected {
+  background-color: #ef4444;
+}

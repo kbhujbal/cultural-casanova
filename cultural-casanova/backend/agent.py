@@ -286,7 +286,6 @@ async def entrypoint(ctx: JobContext):
     def on_agent_state_changed(state):
         logger.info(f"Agent state changed: {state}")
 
-    # Start the session
     await session.start(
         room=ctx.room,
         agent=agent,
